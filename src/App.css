@@ -706,3 +706,136 @@
   font-size: 0.6rem;
   font-family: 'IBM Plex Sans', sans-serif;
 }
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    padding: 0 1.2rem;
+    height: 72px;
+  }
+
+  .hero-inner {
+    flex-direction: row;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+
+  .hero-nav a {
+    display: none; /* hide links */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* PAGE OFFSET */
+  .page {
+    padding-top: 120px;
+  }
+
+  /* HOME SECTION */
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .profile-ring-large {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .profile-ring-large img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .home-name {
+    font-size: 2.4rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .home-description {
+    font-size: 1.1rem;
+  }
+
+  .home-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TOOLS */
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* EXPERIENCE TIMELINE */
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+  }
+
+  /* CERTIFICATIONS */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .hero {
+    padding: 0 2rem;
+  }
+
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .profile-ring-large {
+    width: 340px;
+    height: 340px;
+  }
+
+  .profile-ring-large img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
