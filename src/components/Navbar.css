@@ -1,0 +1,44 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 64px;
+  background: rgba(26,40,105,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid transparent;
+  transition: border-color .3s, background .3s;
+}
+.navbar--scrolled { border-bottom-color: var(--secondary); background: rgba(26,40,105,0.99); }
+.navbar__logo {
+  font-family: var(--font-head); font-size: 19px; font-weight: 700;
+  letter-spacing: 3px; color: var(--white); text-decoration: none;
+}
+.navbar__logo span { color: var(--secondary); }
+.navbar__links { display: flex; gap: 30px; list-style: none; }
+.navbar__links a {
+  font-family: var(--font-head); font-size: 12px; font-weight: 500;
+  letter-spacing: 2.5px; text-transform: uppercase; color: var(--off-white);
+  text-decoration: none; position: relative; padding-bottom: 4px; transition: color .2s;
+}
+.navbar__links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 2px; background: var(--secondary); transition: width .25s;
+}
+.navbar__links a:hover, .navbar__links a.active { color: var(--secondary); }
+.navbar__links a:hover::after, .navbar__links a.active::after { width: 100%; }
+.navbar__burger { display: none; flex-direction: column; gap: 5px; width: 28px; background: none; border: none; cursor: pointer; padding: 4px; }
+.navbar__burger span { display: block; height: 2px; background: var(--white); transition: all .3s; }
+.navbar__burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.navbar__burger.open span:nth-child(2) { opacity: 0; }
+.navbar__burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+@media (max-width: 900px) {
+  .navbar { padding: 0 20px; }
+  .navbar__burger { display: flex; }
+  .navbar__links {
+    display: none; position: absolute; top: 64px; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--primary-dark);
+    border-bottom: 2px solid var(--secondary);
+  }
+  .navbar__links--open { display: flex; }
+  .navbar__links li { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .navbar__links a { display: block; padding: 14px 24px; font-size: 13px; }
+}

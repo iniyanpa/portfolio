@@ -1,0 +1,12 @@
+.experience { background: var(--light-bg); }
+.exp__timeline { position:relative; padding-left:44px; }
+.exp__timeline::before { content:''; position:absolute; left:12px; top:10px; bottom:0; width:2px; background:linear-gradient(180deg,var(--secondary),transparent); }
+.exp__item { position:relative; margin-bottom:52px; }
+.exp__dot { position:absolute; left:-38px; top:7px; width:14px; height:14px; border-radius:50%; background:var(--secondary); border:3px solid var(--primary); box-shadow:0 0 0 4px rgba(41,186,237,0.2); }
+.exp__period { font-family:var(--font-head); font-size:11px; font-weight:500; letter-spacing:3px; color:var(--secondary); text-transform:uppercase; margin-bottom:6px; }
+.exp__title { font-family:var(--font-head); font-size:22px; font-weight:700; color:var(--primary); margin-bottom:4px; }
+.exp__company { font-family:var(--font-body); font-size:14px; color:var(--text-mid); font-style:italic; margin-bottom:16px; }
+.exp__company span { color:var(--secondary); font-style:normal; font-weight:600; }
+.exp__bullets { list-style:none; }
+.exp__bullets li { font-family:var(--font-body); font-size:14px; color:var(--text-mid); padding:5px 0 5px 24px; position:relative; line-height:1.8; }
+.exp__bullets li::before { content:'✧'; position:absolute; left:0; color:var(--secondary); font-size:10px; top:8px; }

@@ -1,0 +1,5 @@
+.footer { background:var(--primary-dark); border-top:2px solid rgba(41,186,237,0.25); padding:28px 60px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+.footer p { font-family:var(--font-body); font-size:12px; color:rgba(255,255,255,0.4); }
+.footer span { color:var(--secondary); }
+.footer__orn { font-family:var(--font-body); font-size:20px; color:rgba(41,186,237,0.3); letter-spacing:8px; }
+@media (max-width:600px) { .footer { padding:24px 16px; justify-content:center; text-align:center; } }

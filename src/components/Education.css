@@ -1,0 +1,9 @@
+.education { background: var(--light-bg); }
+.edu__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.edu__card { background:var(--white); padding:32px 28px; border-top:4px solid var(--primary); transition:transform .3s, box-shadow .3s; }
+.edu__card:hover { transform:translateY(-5px); box-shadow:0 12px 40px rgba(41,55,140,0.12); }
+.edu__year { font-family:var(--font-head); font-size:11px; letter-spacing:3px; color:var(--secondary); text-transform:uppercase; margin-bottom:12px; }
+.edu__degree { font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--primary); margin-bottom:6px; }
+.edu__field { font-family:var(--font-body); font-size:13px; color:var(--secondary); font-style:italic; margin-bottom:14px; }
+.edu__school { font-family:var(--font-body); font-size:13px; color:var(--text-mid); line-height:1.6; }
+@media (max-width:900px) { .edu__grid { grid-template-columns:1fr; } }

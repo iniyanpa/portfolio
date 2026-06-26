@@ -1,0 +1,15 @@
+.achievements { background: var(--primary); }
+.achievements .section-h2 { color: var(--white); border-left-color: var(--secondary); }
+.ac-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.ac-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(41,186,237,0.18);
+  padding: 44px 30px 36px; text-align: center; position: relative; overflow: hidden;
+  transition: background .3s, transform .3s; cursor: default;
+}
+.ac-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--secondary); transform:scaleX(0); transition:transform .35s; }
+.ac-card:hover { background: rgba(41,186,237,0.08); transform: translateY(-5px); }
+.ac-card:hover::before { transform: scaleX(1); }
+.ac-card__metric { font-family:var(--font-head); font-size:58px; font-weight:700; line-height:1; color:var(--secondary); }
+.ac-card__label { font-family:var(--font-body); font-size:13px; color:rgba(255,255,255,0.70); margin-top:12px; line-height:1.6; }
+@media (max-width:900px) { .ac-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width:500px) { .ac-grid { grid-template-columns:1fr; } }
